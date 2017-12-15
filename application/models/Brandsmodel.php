@@ -11,7 +11,7 @@ class Brandsmodel extends CI_Model {
 		$urlfile = "application/models/data/brands.json";
 		
 		$str_data = file_get_contents($urlfile);
-		$data = json_decode($str_data,true);
+		$data = json_decode($str_data);
 		
 		return $data;
 	}

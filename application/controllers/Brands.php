@@ -15,11 +15,9 @@ class Brands extends CI_Controller {
 		
 		$selectBrands = $this->brandsmodel->get_brands();
 		
-	
-		echo "<pre>";
-		print_r($selectBrands);
+		$data["marcas"] = $selectBrands;
 		
-		$this->load->view('welcome_message');
+		$this->load->view('brands', $data);
 		
 	}
 }
