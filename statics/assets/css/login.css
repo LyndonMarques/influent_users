@@ -32,10 +32,12 @@
 .login .footer {
   margin: 0 auto;
   text-align: center;
+  background-color: #2f3e48;width: 350px;
 }
 .login .logo {
   padding: 15px;
   font-size: 23px;
+  background-color: #2f3e48;width: 350px;
 }
 .login .box {
   background-color: #fff;

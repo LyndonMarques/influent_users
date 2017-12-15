@@ -405,6 +405,7 @@
   	 * * * * * * * * * * * */
   .login .logo {
     margin-top: 0 !important;
+    background-color: #2f3e48 !important;width: 350px;
   }
   .login .box {
     width: 100% !important;
