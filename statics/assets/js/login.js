@@ -158,7 +158,7 @@ var Login = function() {
 				},
 
 				submitHandler: function (form) {
-					window.location.href = "interactions";
+					window.location.href = "index.php/interactions";
 
 					// Maybe you want here something like:
 					// $(form).submit();

@@ -106,7 +106,7 @@
 		</ul>
 		
 		<!-- Logo -->
-		<a class="navbar-brand" href="index.html">
+		<a class="navbar-brand" href="<?= base_url("index.php/interactions");?>">
 			<img src="<?= base_url(); ?>statics/assets/img/logo.png" alt="logo" />
 		</a>
 		<!-- /logo -->

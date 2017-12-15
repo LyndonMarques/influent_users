@@ -14,34 +14,16 @@
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:void(0);">
+                    <a href="<?= base_url("/index.php/users");?>">
                         <i class="icon-user"></i>
                         Usuários
                     </a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="<?= base_url("/index.php/users");?>">
-                                <i class="icon-angle-right"></i>
-                                Listar
-                            </a>
-                        </li>
-                        
-                    </ul>
                 </li>
                 <li>
-                    <a href="javascript:void(0);">
+                    <a href="<?= base_url("/index.php/brands");?>">
                         <i class="icon-bookmark"></i>
                         Marcas
                     </a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="<?= base_url("/index.php/brands");?>">
-                                <i class="icon-angle-right"></i>
-                                Listar
-                            </a>
-                        </li>
-                        
-                    </ul>
                 </li>
             
             </ul>

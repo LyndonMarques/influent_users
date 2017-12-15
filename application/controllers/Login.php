@@ -16,7 +16,6 @@ class Login extends CI_Controller {
 	
 	public function logout(){
 		
-		
-		$this->load->view('login');
+		redirect(base_url());
 	}
 }
