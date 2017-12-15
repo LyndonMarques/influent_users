@@ -48,7 +48,7 @@
 						<a href="index.html">Dashboard</a>
 					</li>
 					<li class="current">
-						<a title="">Marcas</a>
+						<a title="">Usuários</a>
 					</li>
 				</ul>
 				
@@ -117,7 +117,7 @@
                                         <td><?= date('j/n/Y', $row->registered); ?></td>
                                         <td><?= $row->email; ?></td>
                                         <td><?= $row->nat; ?></td>
-                                        <td><button class="btn"><i class="icon-eye-open"></i></button></td>
+                                        <td><a href="<?= base_url("index.php/users/profile/".$row->id."");?>" class="btn"><i class="icon-eye-open"></i></a></td>
 									</tr>
 									<?php
 								endforeach;

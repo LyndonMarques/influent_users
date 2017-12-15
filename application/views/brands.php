@@ -85,7 +85,7 @@
 							</div>
 						</div>
 						<div class="widget-content">
-							<table id="dinamico" class="table table-striped table-bordered table-hover table-checkable">
+							<table id="brands" class="table table-striped table-bordered table-hover table-checkable">
 								<thead>
 								<tr>
 									<th></th>

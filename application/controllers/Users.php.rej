@@ -1,0 +1,10 @@
+diff a/application/controllers/Users.php b/application/controllers/Users.php	(rejected hunks)
+@@ -13,7 +13,7 @@
+ 		
+ 		$this->load->model("usersmodel");
+ 		
+-		$selectUsers = $this->usersmodel->get_brands();
++		$selectUsers = $this->usersmodel->get_users();
+ 		
+ 		$data["usuarios"] = $selectUsers;
+ 		

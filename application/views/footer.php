@@ -3,7 +3,7 @@
 
     $(function(){
 
-        $('#interactios, #users').DataTable({
+        $('#interactios, #users, #brands').DataTable({
 
             "bLengthChange": false,
             oLanguage: {
