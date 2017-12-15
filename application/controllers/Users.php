@@ -3,8 +3,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Users extends CI_Controller {
 	
+	public function __construct() {
+		parent::__construct();
+		$this->load->helper('url');
+	}
+	
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		
+		$this->load->model("usersmodel");
+		
+		$selectUsers = $this->usersmodel->get_brands();
+		
+		$data["usuarios"] = $selectUsers;
+		
+		$this->load->view('users', $data);
+		
 	}
 }
