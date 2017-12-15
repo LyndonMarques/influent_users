@@ -3,7 +3,7 @@
 
     $(function(){
 
-        $('#dinamico').DataTable({
+        $('#interactios, #users').DataTable({
 
             "bLengthChange": false,
             oLanguage: {

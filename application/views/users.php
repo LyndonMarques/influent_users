@@ -1,5 +1,8 @@
 
-<?= include "header.php"?>
+<?= include "header.php";
+
+
+?>
 
 <div id="container">
 	<div id="sidebar" class="sidebar-fixed">
@@ -59,7 +62,7 @@
 			<!--=== Page Header ===-->
 			<div class="page-header">
 				<div class="page-title">
-					<h3>Marcas cadastradas</h3>
+					<h3>Usuários cadastrados</h3>
 				</div>
 				
 				<!-- Page Stats -->
@@ -85,25 +88,36 @@
 							</div>
 						</div>
 						<div class="widget-content">
-							<table id="dinamico" class="table table-striped table-bordered table-hover table-checkable">
+							<table id="users" class="table table-striped table-bordered table-hover table-checkable">
 								<thead>
 								<tr>
-									<th></th>
-									<th>ID</th>
-									<th>Marca</th>
+									<th style="width: 80px;"></th>
+									<th style="width: 80px;">ID</th>
+                                    <th>Nome</th>
+                                    <th>Gênero</th>
+                                    <th>Nascido em:</th>
+                                    <th>Registrado em:</th>
+                                    <th>E-mail</th>
+                                    <th>País</th>
+                                    <th style="width: 30px;">Ver</th>
 								</tr>
 								</thead>
 								<tbody>
 								
 								<?php
-								
-								foreach($marcas as $row):
+								 //date('j/n/Y', 287182953);
+								foreach($usuarios as $row):
 									?>
 									<tr>
-										<td><img src="<?= $row->image; ?>"></td>
+										<td><img src="<?= $row->picture->thumbnail; ?>"></td>
 										<td><?= $row->id; ?></td>
-										<td><?= $row->name; ?></td>
-									
+										<td><?= ucfirst ($row->name->title)." ".ucfirst($row->name->first)." ".ucfirst($row->name->last); ?></td>
+                                        <td><?= $row->gender; ?></td>
+                                        <td><?= date('j/n/Y', $row->dob); ?></td>
+                                        <td><?= date('j/n/Y', $row->registered); ?></td>
+                                        <td><?= $row->email; ?></td>
+                                        <td><?= $row->nat; ?></td>
+                                        <td><button class="btn"><i class="icon-eye-open"></i></button></td>
 									</tr>
 									<?php
 								endforeach;

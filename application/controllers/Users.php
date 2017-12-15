@@ -13,7 +13,7 @@ class Users extends CI_Controller {
 		
 		$this->load->model("usersmodel");
 		
-		$selectUsers = $this->usersmodel->get_brands();
+		$selectUsers = $this->usersmodel->get_users();
 		
 		$data["usuarios"] = $selectUsers;
 		

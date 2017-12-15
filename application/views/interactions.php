@@ -45,7 +45,7 @@
                         <a href="index.html">Dashboard</a>
                     </li>
                     <li class="current">
-                        <a title="">Interações</a>
+                        <a title="">Usuários</a>
                     </li>
                 </ul>
 
@@ -59,7 +59,7 @@
             <!--=== Page Header ===-->
             <div class="page-header">
                 <div class="page-title">
-                    <h3>Interação de usuários cadastrados</h3>
+                    <h3>Usuários cadastrados</h3>
                 </div>
 
                 <!-- Page Stats -->
@@ -85,7 +85,7 @@
                             </div>
                         </div>
                         <div class="widget-content">
-                            <table id="dinamico" class="table table-striped table-bordered table-hover table-checkable">
+                            <table id="interactios" class="table table-striped table-bordered table-hover table-checkable">
                                 <thead>
                                 <tr>
                                     <th class="searchable">First Name</th>
