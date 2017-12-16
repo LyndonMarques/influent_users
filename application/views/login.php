@@ -72,7 +72,7 @@
 <div class="box">
     <div class="content">
         <!-- Login Formular -->
-        <form class="form-vertical login-form" action="<?= base_url();?>index.php/interaction" method="post">
+        <form class="form-vertical login-form" action="<?= base_url();?>index.php/login/logar" method="post">
             <!-- Title -->
             <h3 class="form-title">Logar em sua conta</h3>
 

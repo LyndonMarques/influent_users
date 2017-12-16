@@ -158,10 +158,10 @@ var Login = function() {
 				},
 
 				submitHandler: function (form) {
-					window.location.href = "index.php/interactions";
+					window.location.href = "index.php/login/logar";
 
 					// Maybe you want here something like:
-					// $(form).submit();
+					 $(form).submit();
 				}
 			});
 		}
@@ -206,7 +206,7 @@ var Login = function() {
 				},
 
 				submitHandler: function (form) {
-					window.location.href = "index.php/interaction";
+					window.location.href = "index.php/login/logar";
 
 					// Maybe you want here something like:
 					// $(form).submit();

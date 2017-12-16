@@ -7,6 +7,9 @@ class Users extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->model("usersmodel");
+		if($_SESSION['logado'] != TRUE){
+			redirect(base_url());
+		}
 	}
 	
 	public function index()
@@ -21,9 +24,6 @@ class Users extends CI_Controller {
 	{
 		$selectUsers = $this->usersmodel->get_user($id);
 		$data["usuario"] = (object) $selectUsers;
-		
-	//	echo "<pre>";
-		//print_r($data['usuario']['gender']);die;
 		$this->load->view('profile', $data);
 	}
 	

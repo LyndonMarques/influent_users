@@ -8,7 +8,12 @@ class Loginmodel extends CI_Model {
 	
 	public function get_login(){
 		
-		return "model logi";
+		$urlfile = "application/models/data/users.json";
+		
+		$str_data = file_get_contents($urlfile);
+		$data = json_decode($str_data);
+		
+		return $data;
 	}
 	
 }

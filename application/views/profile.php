@@ -89,7 +89,7 @@
 								<h1><?= ucfirst ($usuario->name['title'])." ".ucfirst($usuario->name['first'])." ".ucfirst($usuario->name['last']); ?></h1>
 								
 								<dl class="dl-horizontal">
-									<dt>Genero</dt>
+									<dt>Gênero</dt>
 									<dd><?php
 										switch ($usuario->gender){
 											case $usuario->gender = "male":

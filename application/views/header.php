@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-	<title>Dynamic Tables (DataTables) | Melon - Flat &amp; Responsive Admin Template</title>
+	<title>Teste GAUGE</title>
 	
 	<!--=== CSS ===-->
 	
@@ -125,7 +125,7 @@
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 					<!--<img alt="" src="assets/img/avatar1_small.jpg" />-->
 					<i class="icon-male"></i>
-					<span class="username">John Doe</span>
+					<span class="username"><?= $this->session->userdata('nome');?></span>
 					<i class="icon-caret-down small"></i>
 				</a>
 				<ul class="dropdown-menu">
