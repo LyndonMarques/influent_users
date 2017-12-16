@@ -20,7 +20,10 @@ class Users extends CI_Controller {
 	public function profile($id)
 	{
 		$selectUsers = $this->usersmodel->get_user($id);
-		$data["usuario"] = $selectUsers;
+		$data["usuario"] = (object) $selectUsers;
+		
+	//	echo "<pre>";
+		//print_r($data['usuario']['gender']);die;
 		$this->load->view('profile', $data);
 	}
 	

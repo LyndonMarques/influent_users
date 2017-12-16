@@ -1,5 +1,10 @@
 
-<?= include "header.php"?>
+<?= include "header.php";
+
+//echo "<pre>";
+//print_r($usuario);die;
+
+?>
 
 <div id="container">
 	<div id="sidebar" class="sidebar-fixed">
@@ -62,15 +67,8 @@
 			<!--=== Page Header ===-->
 			<div class="page-header">
 				<div class="page-title">
-					<h3>Perfil</h3>
+					<h3>Perfil do usuário</h3>
 				</div>
-				
-				<!-- Page Stats -->
-				<ul class="page-stats">
-					<li>
-						<div id="sparkline-bar2" class="graph sparkline hidden-xs">5,15,20,30,35,40,50,55,60,70,80,90,100,105</div>
-					</li>
-				</ul>
 				<!-- /Page Stats -->
 			</div>
 			<!-- /Page Header -->
@@ -79,47 +77,68 @@
 			<!--=== Inline Tabs ===-->
 			<div class="row">
 				<div class="col-md-12">
-					<div class="col-md-3">
+					<div class="col-md-4">
 						<div class="list-group">
-							<li class="list-group-item no-padding">
-								<img src="<?= base_url(); ?>/statics/assets/img/demo/avatar-large.jpg" alt="">
+							<li class="list-group-item ">
+								<img src="<?= $usuario->picture['large'];?>" width="300" alt="">
 							</li>
 						</div>
 					</div>
 					
-					<div class="col-md-9">
+					<div class="col-md-8">
 						<div class="row profile-info">
-							<div class="col-md-7">
-								<div class="alert alert-info">You will receive all future updates for free!</div>
-								<h1>John Doe</h1>
+							
+							<div class="col-md-9">
+								<h1><?= ucfirst ($usuario->name['title'])." ".ucfirst($usuario->name['first'])." ".ucfirst($usuario->name['last']); ?></h1>
 								
 								<dl class="dl-horizontal">
-									<dt>Description lists</dt>
-									<dd>A description list is perfect for defining terms.</dd>
-									<dt>Euismod</dt>
-									<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-									<dd>Donec id elit non mi porta gravida at eget metus.</dd>
-									<dt>Malesuada porta</dt>
-									<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-									<dt>Felis euismod semper eget lacinia</dt>
-									<dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
-								</dl>
+									<dt>Genero</dt>
+									<dd><?php
+										switch ($usuario->gender){
+											case $usuario->gender = "male":
+												echo "Masculino";
+												break;
+											case $usuario->gender = "female":
+												echo "Feminino";
+												break;
+										}
+										?></dd>
+									
+									<dt>Nascido em:</dt>
+									<dd><?= date('j/n/Y', $usuario->dob); ?></dd>
+									
+									<dt>E-mail</dt>
+									<dd><?= $usuario->email; ?></dd>
+									
+									<dt>Endereço: </dt>
+									<dd><?= $usuario->location['street']; ?></dd>
+									
+									<dt>Cidade: </dt>
+									<dd><?= $usuario->location['city']; ?></dd>
+									
+									<dt>Cep: </dt>
+									<dd><?= $usuario->location['postcode']; ?></dd>
+									
+									<dt>Estado: </dt>
+									<dd><?= $usuario->location['state']; ?></dd>
+									
+									<dt>País: </dt>
+									<dd><?= $usuario->nat; ?></dd>
+									
+									<dt>Telefone: </dt>
+									<dd><?= $usuario->phone; ?></dd>
+									
+									<dt>Celular: </dt>
+									<dd><?= $usuario->cell; ?></dd>
+									
+									<dt>Registado em: </dt>
+									<dd><?= date('j/n/Y', $usuario->registered); ?></dd>
 								
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt laoreet dolore magna aliquam tincidunt erat volutpat laoreet dolore magna aliquam tincidunt erat volutpat.</p>
-							</div>
-							<div class="col-md-5">
-								<div class="widget">
-									<div class="widget-header">
-										<h4><i class="icon-reorder"></i> Sales</h4>
-									</div>
-									<div class="widget-content">
-										<div id="chart_filled_blue" class="chart"></div>
-									</div>
-								</div>
-							</div>
+								</dl>
+						</div>
+							
 						</div> <!-- /.row -->
-						
-					
+		
 					</div> <!-- /.col-md-9 -->
 				</div>
 			</div> <!-- /.row -->
