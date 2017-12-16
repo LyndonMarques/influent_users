@@ -1,5 +1,8 @@
 
-<?= include "header.php"?>
+<?= include "header.php";
+
+
+?>
 
 <div id="container">
     <div id="sidebar" class="sidebar-fixed">
@@ -10,7 +13,7 @@
                 <li class="current">
                     <a href="<?= base_url("/index.php/interactions");?>">
                         <i class="icon-dashboard"></i>
-                        Dashboard
+                        Interações
                     </a>
                 </li>
                 <li>
@@ -42,10 +45,7 @@
                 <ul id="breadcrumbs" class="breadcrumb">
                     <li>
                         <i class="icon-home"></i>
-                        <a href="">Dashboard</a>
-                    </li>
-                    <li class="current">
-                        <a title="">Usuários</a>
+                        <a href="">Interações</a>
                     </li>
                 </ul>
 
@@ -59,7 +59,7 @@
             <!--=== Page Header ===-->
             <div class="page-header">
                 <div class="page-title">
-                    <h3>Usuários cadastrados</h3>
+                    <h3>Registro de interações</h3>
                 </div>
 
                 <!-- Page Stats -->
@@ -88,51 +88,33 @@
                             <table id="interactios" class="table table-striped table-bordered table-hover table-checkable">
                                 <thead>
                                 <tr>
-                                    <th class="searchable">First Name</th>
-                                    <th>Last Name</th>
-                                    <th class="hidden-xs">Username</th>
-                                    <th>Status</th>
+                                    <th style="width: 80px;"></th>
+                                    <th >Nome</th>
+                                    <th >Interação</th>
+                                    <th >Texto</th>
+                                    <th >E-mail</th>
+                                    <th >Marca</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>Joey</td>
-                                    <td>Greyson</td>
-                                    <td class="hidden-xs">joey123</td>
-                                    <td><span class="label label-success">Approved</span></td>
-                                </tr>
+                            
+                                <?php
+								 //date('j/n/Y', 287182953);
+								 foreach($interacoes as $key => $row):
+									?>
+                                    <tr>
+                                     
+                                        <td><img src="<?= $row['usuarios']['picture']['thumbnail']; ?>" ></td>
+                                        <td><?= ucfirst ($row['usuarios']['name']['title'])." ".ucfirst($row['usuarios']['name']['first'])." ".ucfirst($row['usuarios']['name']['last']); ?></td>
+                                        <td><?= $row['type']; ?></td>
+                                        <td><?= $row['text']; ?></td>
+                                        <td><?= $row['usuarios']['email']; ?></td>
+                                        <td><?= $row['marcas']['name']; ?></td>
+                                    </tr>
+									<?php
+								endforeach;
+								?>
                               
-                                <tr>
-                                    <td>Andrea</td>
-                                    <td>Brenden</td>
-                                    <td class="hidden-xs">andry</td>
-                                    <td><span class="label label-danger">Blocked</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Joey</td>
-                                    <td>Greyson</td>
-                                    <td class="hidden-xs">joey123</td>
-                                    <td><span class="label label-success">Approved</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Wolf</td>
-                                    <td>Bud</td>
-                                    <td class="hidden-xs">wolfy</td>
-                                    <td><span class="label label-info">Pending</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Darin</td>
-                                    <td>Alec</td>
-                                    <td class="hidden-xs">alec82</td>
-                                    <td><span class="label label-warning">Suspended</span></td>
-                                </tr>
-                                <tr>
-                                    
-                                    <td>Andrea</td>
-                                    <td>Brenden</td>
-                                    <td class="hidden-xs">andry</td>
-                                    <td><span class="label label-danger">Blocked</span></td>
-                                </tr>
                                 </tbody>
                             </table>
                         </div>

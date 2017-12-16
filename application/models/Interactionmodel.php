@@ -33,7 +33,7 @@ class Interactionmodel extends CI_Model {
 			//Id do usuario no arquivo interactions.json
 			$id_users             = $data_iteractions[$key]['user'];
 			//Pega id do usuário relacionado ao id users no arquivo interations.json
-			$getUsersKey         = $this->searchForId($id_users, $data_users);
+			$getUsersKey          = $this->searchForId($id_users, $data_users);
 			//Inseri a key usuarios com todos os dados do usuário no array interactions
 			$data_iteractions[$key]['usuarios'] = $data_users[$getUsersKey];
 		}

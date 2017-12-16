@@ -15,7 +15,7 @@
 				<li class="current">
 					<a href="<?= base_url("/index.php/interactions");?>">
 						<i class="icon-dashboard"></i>
-						Dashboard
+						Interações
 					</a>
 				</li>
 				<li>
@@ -47,13 +47,10 @@
 				<ul id="breadcrumbs" class="breadcrumb">
 					<li>
 						<i class="icon-home"></i>
-						<a href="index.html">Dashboard</a>
+                        <a href="<?= base_url("/index.php/users");?>" title="">Usuários</a>
 					</li>
 					<li class="current">
-						<a href="pages_calendar.html" title="">Usuários</a>
-					</li>
-					<li class="current">
-						<a  title="">Perfil</a>
+                        <a  title="">Perfil</a>
 					</li>
 				</ul>
 				

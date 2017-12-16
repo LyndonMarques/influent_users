@@ -11,11 +11,8 @@ class Interactions extends CI_Controller {
 	
 	public function index()
 	{
-		$selectIteractions = $this->interactionmodel->get_interactions();
+		$selectIteractions  = $this->interactionmodel->get_interactions();
 		$data["interacoes"] = $selectIteractions;
-		
-		echo "<pre>";
-		print_r($data);die;
 		$this->load->view('interactions', $data);
 	}
 }

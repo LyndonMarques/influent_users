@@ -13,7 +13,7 @@
 				<li class="current">
 					<a href="<?= base_url("/index.php/interactions");?>">
 						<i class="icon-dashboard"></i>
-						Dashboard
+                        Interações
 					</a>
 				</li>
 				<li>
@@ -43,10 +43,6 @@
 			<!-- Breadcrumbs line -->
 			<div class="crumbs">
 				<ul id="breadcrumbs" class="breadcrumb">
-					<li>
-						<i class="icon-home"></i>
-						<a href="index.html">Dashboard</a>
-					</li>
 					<li class="current">
 						<a title="">Usuários</a>
 					</li>
